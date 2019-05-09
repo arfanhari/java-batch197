@@ -1,7 +1,5 @@
 package day05;
 
-import java.util.ArrayList;
-
 public class Orang {
 
 	/*public int id;
@@ -11,14 +9,14 @@ public class Orang {
 	public String noTelepon;
 	*/
 	
+	//Batch197 == Tipe data | jumlahInput ==  Objek 
 	Batch197 jumlahInput = new Batch197();
-	int capacity = jumlahInput.n;
 	
-	public int[] listId = new int[capacity];
-	public String[] listNama = new String[capacity];
-	public String[] listAlamat = new String[capacity];
-	public String[] listJenisKelamin = new String[capacity];
-	public String[] listNoTelepon = new String[capacity];
+	public int[] listId = new int[jumlahInput.n];
+	public String[] listNama = new String[jumlahInput.n];
+	public String[] listAlamat = new String[jumlahInput.n];
+	public String[] listJenisKelamin = new String[jumlahInput.n];
+	public String[] listNoTelepon = new String[jumlahInput.n];
 	
 	/*public void inputData(int id, String nama, String alamat, String jenisKelamin, String noTelepon) {
 		this.id = id;

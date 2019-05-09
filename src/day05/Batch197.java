@@ -1,6 +1,6 @@
 package day05;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 import java.util.Scanner;
 
@@ -38,13 +38,11 @@ public class Batch197 {
 		input = new Scanner(System.in);
 		System.out.println("\n <=== Contoh Input Seperti Diatas ==>");
 		System.out.println("Berapa banyak data yang akan dimasukkan?");
-		int jumlahInput = input.nextInt();
-
-		n = jumlahInput;
+		n = input.nextInt();
 
 		Orang org = new Orang();
 
-		for (int i = 0; i < jumlahInput; i++) {
+		for (int i = 0; i < n; i++) {
 			System.out.println("Berikan input ID ke - " + (i + 1));
 			org.listId[i] = input.nextInt();
 
