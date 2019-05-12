@@ -21,7 +21,8 @@ public class Batch197 {
 		 * orang01.id = 001; orang01.nama = "Arfan Anhari"; orang01.alamat = "Bogor";
 		 * orang01.jenisKelamin = "Pria"; orang01.noTelepon = "089123456789";
 		 * 
-		 * //Cetak System.out.println("ID \t\t: " + orang01.id);
+		 * //Cetak Data
+		 * System.out.println("ID \t\t: " + orang01.id);
 		 * System.out.println("Nama \t\t: " + orang01.nama);
 		 * System.out.println("Alamat \t\t: " + orang01.alamat);
 		 * System.out.println("Jenis Kelamin \t: " + orang01.jenisKelamin);
@@ -33,13 +34,52 @@ public class Batch197 {
 		 * 
 		 * orang02.cetakData();
 		 */
+		
+		/*
+		 * input & output menggunakan konstruktor
+		 */
+		
+		//Orang orang03 = new Orang(2,"Arfan","Bogor", "Laki-laki", "0987654123");
+		//orang03.cetakData();
+		
 
 		// Input dan cetak data Praktis
 		input = new Scanner(System.in);
 		System.out.println("\n <=== Contoh Input Seperti Diatas ==>");
 		System.out.println("Berapa banyak data yang akan dimasukkan?");
 		n = input.nextInt();
+		
+		Orang org = new Orang();
 
+		for (int i = 0; i < n; i++) {
+			System.out.println("Berikan input ID ke - " + (i + 1));
+			org.listId.add(input.nextInt());
+
+			System.out.println("Berikan input Nama : ");
+			org.listNama.add(input.next());
+
+			System.out.println("Berikan input Alamat : ");
+			org.listAlamat.add(input.next());
+
+			System.out.println("Berikan input Jenis Kelamin : ");
+			org.listJenisKelamin.add(input.next());
+
+			System.out.println("Berikan input Nomor Telepon : ");
+			org.listNoTelepon.add(input.next());
+		}
+		
+		//Cetak 
+		for (int j = 0; j < n; j++) {
+			System.out.println("\nData pribadi untuk input ke - " + (j + 1));
+			System.out.println("ID \t\t: " + org.listId.get(j));
+			System.out.println("Nama \t\t: " + org.listNama.get(j));
+			System.out.println("Alamat \t\t: " + org.listAlamat.get(j));
+			System.out.println("Jenis Kelamin \t: " + org.listJenisKelamin.get(j));
+			System.out.println("Nomor Telepon \t: " + org.listNoTelepon.get(j));
+		}
+		
+		
+		/*
 		Orang org = new Orang();
 
 		for (int i = 0; i < n; i++) {
@@ -67,6 +107,8 @@ public class Batch197 {
 			System.out.println("Jenis Kelamin \t: " + org.listJenisKelamin[j]);
 			System.out.println("Nomor Telepon \t: " + org.listNoTelepon[j]);
 		}
+		
+		*/
 
 	}// Main
 
