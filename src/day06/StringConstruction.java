@@ -17,7 +17,9 @@ public class StringConstruction {
         	 * menghitung elemen dalam objek stream
         	 * method ini juga memberikan return dalam tipe data long
         	 */
-        	sum = (int) s.chars().distinct().count();
+        	//sum = (int) s.chars().distinct().count();
+        	
+        	
         } 
 		return sum;
        
