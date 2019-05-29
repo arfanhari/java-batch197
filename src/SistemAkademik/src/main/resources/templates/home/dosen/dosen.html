@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Form Dosen</title>
+</head>
+<body>
+	<h2>Form Dosen</h2>
+
+	<style>
+table {
+	border: 1px solid black;
+	padding: 20px
+}
+</style>
+	<form th:action="@{/dosen/save}" method="post">
+		<table>
+			<tr>
+				<td>Kode Dosen</td>
+				<td>:</td>
+				<td><input type="text" name="kodeDosen"></td>
+			</tr>
+			<tr>
+				<td>Nama Dosen</td>
+				<td>:</td>
+				<td><input type="text" name="namaDosen"></td>
+			</tr>
+			<tr>
+				<td>Jenis Kelamin</td>
+				<td>:</td>
+				<td><input type="radio" name="jk" value="Pria">Pria
+					<input type="radio" name="jk" value="Wanita">Wanita
+				</td>
+			</tr>
+			<tr>
+				<td>Alamat</td>
+				<td>:</td>
+				<td><input type="text" name="alamat"></td>
+			</tr>
+		</table>
+		<br> &emsp; <input type="submit" value="Submit"> &ensp; <input
+			type="reset" value="Reset">
+	</form>
+</body>
+</html>

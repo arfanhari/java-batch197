@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Form Matakuliah</title>
+</head>
+<body>
+	<h2>Form Matakuliah</h2>
+
+	<style>
+table {
+	border: 1px solid black;
+	padding: 20px
+}
+</style>
+	<form th:action="@{/matakuliah/save}" method="post">
+		<table>
+			<tr>
+				<td><input type="hidden" name="id"
+					th:value="${matakuliahEdit.id}"></td>
+			</tr>
+			<tr>
+				<td>Kode Matakuliah</td>
+				<td>:</td>
+				<td><input type="text" name="kodeMatakuliah"
+					th:value="${matakuliahEdit.kodeMatakuliah}"></td>
+			</tr>
+			<tr>
+				<td>Nama Matakuliah</td>
+				<td>:</td>
+				<td><input type="text" name="namaMatakuliah"
+					th:value="${matakuliahEdit.namaMatakuliah}"></td>
+			</tr>
+			<tr>
+				<td>SKS</td>
+				<td>:</td>
+				<td><input type="number" name="sks"
+					th:value="${matakuliahEdit.sks}"></td>
+			</tr>
+			<tr>
+				<td>Kode Jurusan</td>
+				<td>:</td>
+				<td><select name = "jurusanId">
+						<option th:each="item:${listJurusan}" th:value="${item.id}"
+							th:text="${item.kodeJurusan}">Pilih Jurusan</option>
+				</select></td>
+			</tr>
+		</table>
+		<br> &emsp; <input type="submit" value="Submit"> &ensp; <input
+			type="reset" value="Reset">
+	</form>
+</body>
+</html>

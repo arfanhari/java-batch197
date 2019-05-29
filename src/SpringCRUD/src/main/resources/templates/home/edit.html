@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>Form Biodata</title>
+</head>
+<body>
+	<h2>Biodata</h2>
+
+	<style>
+table {
+	border: 1px solid black;
+	padding: 20px
+}
+</style>
+	<form th:action="@{/home/save}" method="post">
+		<table>
+			<tr>
+				<td>Nama Lengkap</td>
+				<td>:</td>
+				<td><input type="text" name="namaLengkap"></td>
+			</tr>
+			<tr>
+				<td>Alamat</td>
+				<td>:</td>
+				<td><input type="text" name="alamat"></td>
+			</tr>
+			<tr>
+				<td>Nomor Telepon</td>
+				<td>:</td>
+				<td><input type="tel" name="telepon"></td>
+			</tr>
+			<tr>
+				<td>Tempat Lahir</td>
+				<td>:</td>
+				<td><input type="text" name="tempatLahir"></td>
+			</tr>
+			<tr>
+				<td>Tanggal Lahir</td>
+				<td>:</td>
+				<td><input type="date" name="tanggallahir"></td>
+			</tr>
+			<tr>
+				<td>Agama</td>
+				<td>:</td>
+				<td><select required id="agama" name="agama">
+						<option value="pilih">Pilih Agama</option>
+						<option value="islam">Islam</option>
+						<option value="kristen_protestan">Kristen Protestan</option>
+						<option value="katolik">Katolik</option>
+						<option value="hindu">Hindu</option>
+						<option value="budha">Budha</option>
+						<option value="konghucu">Kong Hu Cu</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Jenis Kelamin</td>
+				<td>:</td>
+				<td><input type="radio" name="jeniskelamin" value="pria">Pria
+					<input type="radio" name="jeniskelamin" value="wanita">Wanita</td>
+			</tr>
+			<tr>
+				<td>Golongan Darah</td>
+				<td>:</td>
+				<td><input type="radio" name="golongan_darah" value="a">A
+					<input type="radio" name="golongan_darah" value="b">B <input
+					type="radio" name="golongan_darah" value="ab">AB <input
+					type="radio" name="golongan_darah" value="o">O</td>
+			</tr>
+			<tr>
+				<td>Kendaraan yang dimiliki</td>
+				<td>:</td>
+				<td><table>
+						<td><input type="checkbox" name="kendaraan" value="Motor">
+							Motor</td>
+						<td><input type="checkbox" name="kendaraan" value="Mobil">
+							Mobil</td>
+						<td><input type="checkbox" name="kendaraan" value="Kereta">
+							Kereta</td>
+						<td><input type="checkbox" name="kendaraan" value="lainnya"
+							onclick="var input = document.getElementById('inputlainnya');if(this.checked){ input.disabled = false;input.focus();} else{input.disabled=true;}" />
+							Lainnya</td>
+						<!-- baris 2, kolom 1 dan 2 -->
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="kendaraan" value="Kapal">
+					Kapal Laut</td>
+				<td><input type="checkbox" name="kendaraan" value="PesawatJet">
+					Jet Pribadi</td>
+				<td><input type="checkbox" name="kendaraan" value="Helicopter">
+					Helicopter &ensp;</td>
+				<td><input id="inputlainnya" name="inputlainnya"
+					disabled="disabled" /></td>
+			</tr>
+		</table>
+		</td>
+		</table>
+		<br>
+		&emsp; <input type="submit" value="Submit"> &ensp;
+		<input type="reset" value="Reset">
+	</form>
+</body>
+</html>

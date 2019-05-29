@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 5px;
+	text-align: left;
+}
+</style>
+</head>
+<body>
+	<table>
+		<caption>Tabel Fakultas</caption>
+		<thead>
+			<tr>
+				<th>Kode Fakultas</th>
+				<th>Nama Fakultas</th>
+				<th>Action</th>
+				<th>Hapus</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- th: = dependencies dari thymeleaf dan each untuk memanggil/merujuk ke setiap
+			item:${fakultasList} item yg ada di list fakultas -->
+			<tr th:each="item:${fakultasList}">
+				
+				<!-- merujuk ke variabel kode fakultas -->
+				<td><span th:text="${item.kodeFakultas}"></span></td>
+				<td><span th:text="${item.namaFakultas}"></span></td>
+				
+				<!-- merujuk ke method edit -->
+				<td><a th:href="@{edit/{id}(id=${item.id})}">Edit</a></td>
+				<td><a th:href="@{hapus/{id}(id=${item.id})}">Hapus</a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

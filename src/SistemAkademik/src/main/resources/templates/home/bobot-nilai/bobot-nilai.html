@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Form Bobot Nilai</title>
+</head>
+<body>
+	<h2>Form Bobot Nilai</h2>
+
+	<style>
+table {
+	border: 1px solid black;
+	padding: 20px
+}
+</style>
+<form th:action="@{/bobot-nilai/save}" method="post">
+		<table>
+			<tr>
+				<td>Kode Nilai</td>
+				<td>:</td>
+				<td><input type="text" name="kodeNilai"></td>
+			</tr>
+			<tr>
+				<td>Bobot</td>
+				<td>:</td>
+				<td><input type="text" name="bobot"></td>
+			</tr>
+		</table>
+		<br>
+		&emsp; <input type="submit" value="Submit"> &ensp;
+		<input type="reset" value="Reset">
+	</form>
+</body>
+</html>

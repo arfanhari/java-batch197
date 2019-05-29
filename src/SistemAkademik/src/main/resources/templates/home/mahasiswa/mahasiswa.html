@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Form Mahasiswa</title>
+</head>
+<body>
+	<h2>Form Mahasiswa</h2>
+	<style>
+table {
+	border: 1px solid black;
+	padding: 20px
+}
+</style>
+	<form th:action = @{/mahasiswa/save} method="post">
+		<table>
+			<tr>
+				<td>NIM</td>
+				<td>:</td>
+				<td><input type="text" name="nim"></td>
+			</tr>
+			<tr>
+				<td>Nama Mahasiswa</td>
+				<td>:</td>
+				<td><input type="text" name="namaMahasiswa"></td>
+			</tr>
+			<tr>
+				<td>Jenis Kelamin</td>
+				<td>:</td>
+				<td><input type="text" name="jk"></td>
+			</tr>
+			<tr>
+				<td>Alamat</td>
+				<td>:</td>
+				<td><input type="text" name="alamat"></td>
+			</tr>
+			<tr>
+				<td>Kode Jurusan</td>
+				<td>:</td>
+				<td><select name = "jurusanId">
+						<option th:each="item:${listJurusan}" th:value="${item.id}"
+							th:text="${item.kodeJurusan}">Pilih Jurusan</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td>:</td>
+				<td><input type="text" name="status"></td>
+			</tr>
+		</table>
+		<br>
+		&emsp; <input type="submit" value="Submit"> &ensp; <input
+			type="reset" value="Reset">
+	</form>
+</body>
+</html>

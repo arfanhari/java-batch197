@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Form Dosen</title>
+</head>
+<body>
+	<h2>Form Dosen</h2>
+
+	<style>
+table {
+	border: 1px solid black;
+	padding: 20px
+}
+</style>
+	<form th:action="@{/dosen/save}" method="post">
+		<table>
+			<tr>
+				<td><input type="hidden" name="id" th:value="${dosenEdit.id}"></td>
+			</tr>
+			<tr>
+				<td>Kode Dosen</td>
+				<td>:</td>
+				<td><input type="text" name="kodeDosen"
+					th:value="${dosenEdit.kodeDosen}"></td>
+			</tr>
+			<tr>
+				<td>Nama Dosen</td>
+				<td>:</td>
+				<td><input type="text" name="namaDosen"
+					th:value="${dosenEdit.namaDosen}"></td>
+			</tr>
+			<tr>
+				<td>Jenis Kelamin</td>
+				<td>:</td>
+				<td><input type="radio" name="jk" value="Pria">Pria
+					<input type="radio" name="jk" value="Wanita">Wanita
+				</td>
+				<!-- <input type="text" name="jk" th:value="${dosenEdit.jk}"></td> -->
+			</tr>
+			<tr>
+				<td>Alamat</td>
+				<td>:</td>
+				<td><input type="text" name="alamat"
+					th:value="${dosenEdit.alamat}"></td>
+			</tr>
+		</table>
+		<br> &emsp; <input type="submit" value="Submit"> &ensp; <input
+			type="reset" value="Reset">
+	</form>
+</body>
+</html>

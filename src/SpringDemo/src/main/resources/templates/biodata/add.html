@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<h2>Biodata</h2>
+	<form>
+		<fieldset>
+			<legend>Data Diri:</legend>
+			<table>
+				<tr>
+					<td>Nama Lengkap</td>
+					<td>:</td>
+					<td><input type="text" name="namalengkap"></td>
+				</tr>
+				<tr>
+					<td>Nama Panggilan</td>
+					<td>:</td>
+					<td><input type="text" name="namapanggilan"></td>
+				</tr>
+				<tr>
+					<td>Kota Kelahiran</td>
+					<td>:</td>
+					<!-- gunakan required ketika diharuskan memilih salah satu -->
+					<td><select required id="kotakelahiran" name="kota">
+							<option value="pilih">Pilih Kota</option>
+							<option value="bogor">Bogor</option>
+							<option value="depok">Depok</option>
+							<option value="jakarta">Jakarta</option>
+							<option value="tangerang">Tangerang</option>
+							<option value="bekasi">Bekasi</option>
+							<option value="bandung">Bandung</option>
+					</select>
+				</tr>
+				<tr>
+					<td>Tanggal Lahir</td>
+					<td>:</td>
+					<td><input type="date" name="tanggallahir"></td>
+				</tr>
+				<tr>
+					<td>Alamat saat ini</td>
+					<td>:</td>
+					<td><textarea cols="21" rows="5"></textarea></td>
+				</tr>
+				<tr>
+					<td>Jenis Kelamin</td>
+					<td>:</td>
+					<td><input type="radio" name="jeniskelamin" value="Laki-laki"
+						Checked>Laki-laki <input type="radio" name="jeniskelamin"
+						value="Perempuan">Perempuan</td>
+				</tr>
+				<tr>
+					<td>Kendaraan yang digunakan sehari-hari</td>
+					<td>:</td>
+					<td><input type="checkbox" name="vehicle" value="Motor">
+						Motor</td>
+					<td><input type="checkbox" name="vehicle" value="Mobil">
+						Mobil</td>
+					<td><input type="checkbox" name="vehicle" value="Kereta">
+						Kereta</td>
+					<td><input type="checkbox" name="vehicle" value="lainnya"
+						onclick="var input = document.getElementById('inputlainnya');if(this.checked){ input.disabled = false;input.focus();} else{input.disabled=true;}" />
+						Lainnya</td>
+					<!-- baris 2, kolom 1 dan 2 -->
+				<tr>
+					<td></td>
+					<td></td>
+					<td><input type="checkbox" name="vehicle" value="Kapal">
+						Kapal Laut</td>
+					<td><input type="checkbox" name="vehicle" value="PesawatJet">
+						Jet Pribadi</td>
+					<td><input type="checkbox" name="vehicle" value="Helicopter">
+						Helicopter</td>
+					<td><input id="inputlainnya" name="inputlainnya"
+						disabled="disabled" /></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+
+</body>
+</html>
+

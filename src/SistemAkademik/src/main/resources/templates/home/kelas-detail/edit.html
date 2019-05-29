@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Form Kelas Detail</title>
+</head>
+<body>
+	<h2>Form Kelas Detail</h2>
+
+	<style>
+table {
+	border: 1px solid black;
+	padding: 20px
+}
+</style>
+	<form th:action="@{/kelas-detail/save}" method="post">
+		<table>
+			<tr>
+				<td><input type="hidden" name="id"
+					th:value="${kelasDetailEdit.id}"></td>
+			</tr>
+			<tr>
+				<td>Kode Kelas</td>
+				<td>:</td>
+				<td><input type="text" name="kodeKelas"
+					th:value="${kelasDetailEdit.kodeKelas}"></td>
+			</tr>
+			<tr>
+				<td>NIM</td>
+				<td>:</td>
+				<td><input type="
+					text" name="nim" th:value="${kelasDetailEdit.nim}"></td>
+			</tr>
+			<tr>
+				<td>Nilai</td>
+				<td>:</td>
+				<td><input type="text" name="nilai" th:value="${kelasDetailEdit.nilai}"></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td>:</td>
+				<td><input type="text" name="status" th:value="${kelasDetailEdit.status}"></td>
+			</tr>
+		</table>
+		<br> &emsp; <input type="submit" value="Submit"> &ensp; <input
+			type="reset" value="Reset">
+	</form>
+</body>
+</html>

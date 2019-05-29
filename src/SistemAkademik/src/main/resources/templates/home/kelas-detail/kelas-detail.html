@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Form Kelas Detail</title>
+</head>
+<body>
+	<h2>Form Kelas Detail</h2>
+
+	<style>
+table {
+	border: 1px solid black;
+	padding: 20px
+}
+</style>
+<form th:action="@{/kelas-detail/save}" method="post">
+		<table>
+			<tr>
+				<td>Kode Kelas</td>
+				<td>:</td>
+				<td><input type="text" name="kodeKelas"></td>
+			</tr>
+			<tr>
+				<td>NIM</td>
+				<td>:</td>
+				<td><input type="text" name="nim"></td>
+			</tr>
+			<tr>
+				<td>Nilai</td>
+				<td>:</td>
+				<td><input type="text" name="nilai"></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td>:</td>
+				<td><input type="text" name="status"></td>
+			</tr>
+		</table>
+		<br>
+		&emsp; <input type="submit" value="Submit"> &ensp;
+		<input type="reset" value="Reset">
+	</form>
+</body>
+</html>

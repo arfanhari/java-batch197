@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 5px;
+	text-align: left;
+}
+</style>
+</head>
+<body>
+	<table>
+		<caption>Tabel Mahasiswa</caption>
+		<thead>
+			<tr>
+				<th>NIM</th>
+				<th>Nama Mahasiswa</th>
+				<th>Jenis Kelamin</th>
+				<th>Alamat</th>
+				<th>Kode Jurusan</th>
+				<th>Status</th> 
+				<th>Action</th>
+				<th>Hapus</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="item:${mahasiswaList}">
+				
+				<td th:text="${item.nim}"></td>
+				<td th:text="${item.namaMahasiswa}"></td>
+				<td th:text="${item.jk}"></td>
+				<td th:text="${item.alamat}"></td>
+				<td th:text="${item.jurusan.kodeJurusan}"></td>
+				<td th:text="${item.status}"></td>
+				
+				<!-- merujuk ke method edit -->
+				<td><a th:href="@{edit/{id}(id=${item.id})}">Edit</a></td>
+				<td><a th:href="@{hapus/{id}(id=${item.id})}">Hapus</a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

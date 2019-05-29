@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Form Ruang</title>
+</head>
+<body>
+	<h2>Form Ruang</h2>
+
+	<style>
+table {
+	border: 1px solid black;
+	padding: 20px
+}
+</style>
+	<form th:action="@{/ruang/save}" method="post">
+		<table>
+			<tr>
+				<td><input type="hidden" name="id"
+					th:value="${ruangEdit.id}"></td>
+			</tr>
+			<tr>
+				<td>Kode Ruang</td>
+				<td>:</td>
+				<td><input type="text" name="kodeRuang"
+					th:value="${ruangEdit.kodeRuang}"></td>
+			</tr>
+			<tr>
+				<td>Nama Ruang</td>
+				<td>:</td>
+				<td><input type="text" name="namaRuang"
+					th:value="${ruangEdit.namaRuang}"></td>
+			</tr>
+			<tr>
+				<td>Kapasitas</td>
+				<td>:</td>
+				<td><input type="text" name="kapasitas"
+					th:value="${ruangEdit.kapasitas}"></td>
+			</tr>
+		</table>
+		<br> &emsp; <input type="submit" value="Submit"> &ensp; <input
+			type="reset" value="Reset">
+	</form>
+</body>
+</html>

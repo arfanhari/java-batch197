@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 5px;
+	text-align: left;
+}
+</style>
+</head>
+<body>
+	<table>
+		<caption>Tabel Jurusan</caption>
+		<thead>
+			<tr>
+			<!-- <th> table header  -->
+				<th>Kode Matakuliah</th>
+				<th>Nama Matakuliah</th>
+				<th>SKS</th>
+				<th>Kode Jurusan</th>
+				<th>Action</th>
+				<th>Hapus</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="item:${matakuliahList}">
+				
+				<!-- merujuk ke variabel kode fakultas -->
+				<td th:text="${item.kodeMatakuliah}"></td>
+				<td th:text="${item.namaMatakuliah}"></td>
+				<td th:text="${item.sks}"></td>
+				<td th:text="${item.jurusan.kodeJurusan}"></td>
+				
+				<!-- merujuk ke method edit -->
+				<td><a th:href="@{edit/{id}(id=${item.id})}">Edit</a></td>
+				<td><a th:href="@{hapus/{id}(id=${item.id})}">Hapus</a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
